@@ -1,8 +1,7 @@
 import React from "react";
-import { ImPencil } from "react-icons/im";
-import { TbTrash } from "react-icons/tb";
+import { ImPencil, ImBin } from "react-icons/im";
 import "../styles/Body.css";
-
+import CheckedList from "./CheckedList";
 export default function Body() {
   return (
     <div className="main">
@@ -14,7 +13,7 @@ export default function Body() {
         <div className="body">
           <div className="group1">
             <div className="box">
-              <input type="checkbox" name="checkbox" id="group-1-chechbox" />
+              <input type="radio" name="radio" id="group-1-radio" />
               <h3>My todo list #1</h3>
             </div>
             <div className="icon-div">
@@ -22,66 +21,11 @@ export default function Body() {
                 <ImPencil />
               </button>
               <button>
-                <TbTrash className="trashcan-icon" />
+                <ImBin className="trashcan-icon" />
               </button>
             </div>
           </div>
-          <div className="group2">
-            <div className="box">
-              <input type="checkbox" name="checkbox" id="group-2-chechbox" />
-              <h3>My todo list #2</h3>
-            </div>
-            <div className="icon-div">
-              <button>
-                <ImPencil />
-              </button>
-              <button>
-                <TbTrash className="trashcan-icon" />
-              </button>
-            </div>
-          </div>
-          <div className="group3">
-            <div className="box">
-              <input type="checkbox" name="checkbox" id="group-3-chechbox" />
-              <h3>My todo list #3</h3>
-            </div>
-            <div className="icon-div">
-              <button>
-                <ImPencil />
-              </button>
-              <button>
-                <TbTrash className="trashcan-icon" />
-              </button>
-            </div>
-          </div>
-          <div className="group4">
-            <div className="box">
-              <input type="checkbox" name="checkbox" id="group-4-chechbox" />
-              <h3>My todo list #4</h3>
-            </div>
-            <div className="icon-div">
-              <button>
-                <ImPencil />
-              </button>
-              <button>
-                <TbTrash className="trashcan-icon" />
-              </button>
-            </div>
-          </div>
-          <div className="group5">
-            <div className="box">
-              <input type="checkbox" name="checkbox" id="group-5-chechbox" />
-              <h3>My todo list #5</h3>
-            </div>
-            <div className="icon-div">
-              <button>
-                <ImPencil />
-              </button>
-              <button>
-                <TbTrash className="trashcan-icon" />
-              </button>
-            </div>
-          </div>
+
           <div className="adding-part">
             <input type="text" placeholder="what's next?" size={45} />
           </div>
@@ -90,6 +34,9 @@ export default function Body() {
           </div>
         </div>
       </form>
+      <div className="checked-div">
+        <CheckedList />
+      </div>
     </div>
   );
 }
